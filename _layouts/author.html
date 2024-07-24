@@ -10,7 +10,9 @@ layout: default
 
     <h1>{{ page.name }} ({{ page.github_username }})</h1>
     <h4>{{ page.position }}</h4>
-    {{ content }}
+    <p>
+      {{ content }}
+    </p>
     <h6>Posts</h6>
       <ul>
         {% assign filtered_posts = site.posts | where: 'author', page.github_username %}
