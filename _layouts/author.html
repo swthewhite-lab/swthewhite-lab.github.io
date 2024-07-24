@@ -1,15 +1,38 @@
 ---
 layout: default
 ---
-<h1>{{ page.name }}</h1>
-<h2>{{ page.position }}</h2>
 
-{{ content }}
+{% include site-header.html %}
 
-<h2>Posts</h2>
-<ul>
-  {% assign filtered_posts = site.posts | where: 'author', page.github_username %}
-  {% for post in filtered_posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<main class="main  container">
+
+  <article class="article  article--post  content  typeset">
+
+    <h1>{{ page.name }}</h1>
+    <h2>{{ page.position }}</h2>
+    <h3>{{ content }}</h3>
+    <p>
+      Posts
+      <ul>
+        {% assign filtered_posts = site.posts | where: 'author', page.github_username %}
+        {% for post in filtered_posts %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </p>
+    {% include post-meta.html %}
+    {{ content }}
+
+    {% include nav-share.html %}
+
+    {% include post-comments.html %}
+
+  </article>
+
+  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
+
+</main>
+
+{% include site-footer.html %}
+
+
