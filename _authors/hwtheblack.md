@@ -1,6 +1,6 @@
 ---
 username: hwtheblack
-name: Seungwoo Hyeon
+name: Hyeongwoo Hyun
 position: Embedded SW Engineer
 feature_image: https://avatars.githubusercontent.com/u/176457976?v=4
 ---
