@@ -10,12 +10,13 @@ layout: default
 
     <h1>{{ page.title }}</h1>
     <p>
+      {% include post-meta.html %}
       {% assign author = site.authors | where: 'username', page.author | first %}
       {% if author %}
         - <a href="{{ author.url }}">{{ author.name }}</a>
       {% endif %}
     </p>
-    {% include post-meta.html %}
+    
     {{ content }}
 
     {% include nav-share.html %}
