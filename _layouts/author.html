@@ -8,8 +8,9 @@ layout: default
 
   <article class="article  article--post  content  typeset">
 
-    <span><h1>{{ page.name }}</h1>{{ page.username }}</span>
-    <h4>{{ page.position }}</h4>
+    <h1>{{ page.name }}</h1>
+    <h3>Name: [{{ page.username }}]({{ page.github }})</h3>
+    <h4>Position: {{ page.position }}</h4>
     <p>
       {{ content }}
     </p>
