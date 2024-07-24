@@ -9,8 +9,8 @@ layout: default
   <article class="article  article--post  content  typeset">
 
     <h1>{{ page.name }}</h1>
-    <h3>Name: [{{ page.username }}]({{ page.github }})</h3>
-    <h4>Position: {{ page.position }}</h4>
+    <h3>Name: <a href="page.github">{{ page.username }}</a></h3>
+    <h3>Position: {{ page.position }}</h3>
     <p>
       {{ content }}
     </p>
