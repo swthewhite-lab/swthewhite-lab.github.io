@@ -136,7 +136,7 @@ navigation_header:
 - title: Categories
   url: /categories/
 - title: Staff
-  link: /staff/
+  url: /staff/
 - title: Search
   url: /search/
 
